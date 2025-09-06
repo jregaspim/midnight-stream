@@ -1,12 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../../styles.css";
 import MovieCard, { Movie } from "../MovieCard/MovieCard";
 
 interface MoviesGridProps {
   movies: Movie[];
+  watchlist: number[];
+  toggleWatchlist: any;
 }
 
-const MoviesGrid: React.FC<MoviesGridProps> = ({ movies }) => {
+const MoviesGrid: React.FC<MoviesGridProps> = ({
+  movies,
+  watchlist,
+  toggleWatchlist,
+}) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [genreFilter, setGenre] = useState("All Genres");
   const [ratingFilter, setRating] = useState("All");
@@ -88,7 +94,12 @@ const MoviesGrid: React.FC<MoviesGridProps> = ({ movies }) => {
           .filter((movie) => filterByGenre(movie, genreFilter))
           .filter((movie) => filterByRating(movie, ratingFilter))
           .map((movie) => (
-            <MovieCard movie={movie} key={movie.id} />
+            <MovieCard
+              movie={movie}
+              key={movie.id}
+              toggleWatchlist={toggleWatchlist}
+              isWatchlisted={watchlist.includes(movie.id)}
+            />
           ))}
       </div>
     </div>

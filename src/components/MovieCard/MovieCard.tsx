@@ -11,9 +11,15 @@ export interface Movie {
 
 interface MovieCardProps {
   movie: Movie;
+  isWatchlisted: boolean;
+  toggleWatchlist: any;
 }
 
-const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
+const MovieCard: React.FC<MovieCardProps> = ({
+  movie,
+  isWatchlisted,
+  toggleWatchlist,
+}) => {
   const handleImageError = (
     e: React.SyntheticEvent<HTMLImageElement, Event>
   ) => {
@@ -36,10 +42,26 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
         />
         <div className="movie-card-info">
           <h3 className="movie-card-title">{movie.title}</h3>
-          <h3 className="movie-card-genre">{movie.genre}</h3>
-          <h3 className={`movie-card-rating ${getRatingClass(movie.rating)}`}>
-            {movie.rating}
-          </h3>
+          <div>
+            <span className="movie-card-genre">{movie.genre}</span>
+            <span
+              className={`movie-card-rating ${getRatingClass(movie.rating)}`}
+            >
+              {movie.rating}
+            </span>
+          </div>
+          <label className="switch">
+            <input
+              type="checkbox"
+              checked={isWatchlisted}
+              onChange={() => toggleWatchlist(movie.id)}
+            ></input>
+            <span className="slider">
+              <span className="slider-label">
+                {isWatchlisted ? "In Watchlist" : "Add to Watchlist"}
+              </span>
+            </span>
+          </label>
         </div>
       </div>
     </div>
