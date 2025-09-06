@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles.css";
 
-export default function Header() {
+const Header: React.FC = () => {
   return (
     <div className="header">
       <h1 className="logo">Midnight Stream</h1>
@@ -10,4 +10,6 @@ export default function Header() {
       </h2>
     </div>
   );
-}
+};
+
+export default Header;
