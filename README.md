@@ -4,17 +4,19 @@ web application built with React, TypeScript, and React Router. Midnight Stream 
 
 ## Features
 
-🔍 Movie Browsing – Display movies in a responsive grid layout.
+Movie Browsing – Display movies in a responsive grid layout.
 
-🎞️ Movie Cards – Each movie includes poster, title, genre, and rating.
+Movie Cards – Each movie includes poster, title, genre, and rating.
 
-➕ Watchlist Management – Add or remove movies from a personal watchlist.
+Watchlist Management – Add or remove movies from a personal watchlist.
 
-🖼️ Error Handling for Images – Gracefully handles broken/missing images.
+Error Handling for Images – Gracefully handles broken/missing images.
 
-🧭 Navigation – Includes header, footer, and client-side routing with React Router.
+Navigation – Includes header, footer, and client-side routing with React Router.
 
-🎨 Responsive Design – Optimized for desktop and mobile experiences.
+Responsive Design – Optimized for desktop and mobile experiences.
+
+##
 
 # Getting Started with Create React App
 
