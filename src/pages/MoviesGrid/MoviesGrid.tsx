@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../styles.css";
-import MovieCard, { Movie } from "../MovieCard/MovieCard";
+import MovieCard, { Movie } from "../../components/MovieCard/MovieCard";
 
 interface MoviesGridProps {
   movies: Movie[];

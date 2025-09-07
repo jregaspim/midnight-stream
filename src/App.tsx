@@ -2,9 +2,9 @@ import "./App.css";
 import "./styles.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import MoviesGrid from "./components/MoviesGrid/MoviesGrid";
+import MoviesGrid from "./pages/MoviesGrid/MoviesGrid";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Watchlist from "./components/Watchlist/Watchlist";
+import Watchlist from "./pages/Watchlist/Watchlist";
 import { useEffect, useState } from "react";
 import { Movie } from "./components/MovieCard/MovieCard";
 
